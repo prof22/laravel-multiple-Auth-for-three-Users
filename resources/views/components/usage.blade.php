@@ -1,0 +1,32 @@
+@if(Auth::guard('web')->check())
+
+    <p class="text-success">
+        You are logged in as <strong>User</strong>
+    </p>
+@else
+    <p class="text-danger">
+        You are logged out as a <strong>User</strong>
+    </p>
+@endif
+
+@if(Auth::guard('admin')->check())
+
+    <p class="text-success">
+        You are logged in as <strong>Admin</strong>
+    </p>
+@else
+    <p class="text-danger">
+        You are logged out as a <strong>Admin</strong>
+    </p>
+@endif
+
+@if(Auth::guard('instructor')->check())
+
+    <p class="text-success">
+        You are logged in as <strong>Instructor</strong>
+    </p>
+@else
+    <p class="text-danger">
+        You are logged out as a <strong>Instructor</strong>
+    </p>
+@endif
